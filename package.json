@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev": "vite",
+    "check:type": "tsc",
+    "check:lint": "biome lint",
+    "check:format": "biome format --write"
   },
   "dependencies": {
     "react": "^19.1.0",
