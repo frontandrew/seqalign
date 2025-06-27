@@ -1,0 +1,20 @@
+{
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports.biome": "explicit",
+        "source.fixAll.biome": "explicit"
+    },
+    "css.format.enable": false,
+    "json.format.enable": true,
+    "javascript.format.enable": true,
+    "typescript.format.enable": true,
+    "[css]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}
