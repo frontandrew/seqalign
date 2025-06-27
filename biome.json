@@ -1,36 +1,27 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
-  "vcs": {
-    "enabled": false,
-    "clientKind": "git",
-    "useIgnoreFile": false
-  },
-  "files": {
-    "includes": ["./src/**"],
-    "ignoreUnknown": false
-  },
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": false,
-    "indentStyle": "space",
-    "lineWidth": 110,
-    "lineEnding": "lf"
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-    }
-  },
-  "javascript": {
-    "formatter": {
-      "arrowParentheses": "always",
-      "enabled": true,
-      "indentWidth": 2,
-      "jsxQuoteStyle": "double",
-      "quoteStyle": "single",
-      "semicolons": "asNeeded"
-    }
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              ":NODE:",
+              ":BLANK_LINE:",
+              ":PACKAGE:",
+              ":BLANK_LINE:",
+              ":ALIAS:",
+              ":BLANK_LINE:",
+              ":PATH:"
+            ]
+          }
+        },
+        "useSortedKeys": "on",
+        "useSortedProperties": "on"
+      }
+    },
+    "enabled": true
   },
   "css": {
     "formatter": {
@@ -41,14 +32,37 @@
       "enabled": true
     }
   },
-  "assist": {
+  "files": {
+    "ignoreUnknown": false,
+    "includes": ["./src/**"]
+  },
+  "formatter": {
     "enabled": true,
-    "actions": {
-      "source": {
-        "organizeImports": "on",
-        "useSortedProperties": "on",
-        "useSortedKeys": "on"
-      }
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "lineEnding": "lf",
+    "lineWidth": 110
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "always",
+      "enabled": true,
+      "indentWidth": 2,
+      "jsxQuoteStyle": "double",
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "none"
     }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true
+    }
+  },
+  "vcs": {
+    "clientKind": "git",
+    "enabled": false,
+    "useIgnoreFile": false
   }
 }
