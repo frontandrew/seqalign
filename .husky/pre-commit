@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+
+npx tsc
+npx @biomejs/biome lint --staged --no-errors-on-unmatched
+npx @biomejs/biome format --staged --no-errors-on-unmatched --write
