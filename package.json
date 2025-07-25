@@ -8,9 +8,9 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "dev": "vite",
-    "check:type": "tsc",
-    "check:lint": "biome lint",
-    "check:format": "biome format --write"
+    "type": "tsc",
+    "lint": "biome lint",
+    "format": "biome format --write --stage"
   },
   "dependencies": {
     "react": "^19.1.0",
