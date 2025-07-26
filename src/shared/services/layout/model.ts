@@ -1,8 +1,3 @@
-/**
- * Combined store representing the application layout state.
- * @type {Store<AppLayout>} A store containing the current breakpoint information
- * @property {Brakepoint | null} breakPoint - The current responsive breakpoint of the application
- */
 import { combine, createEvent, createStore, sample } from 'effector'
 
 import { calcBrakepoint } from './tools'
@@ -17,8 +12,9 @@ const $brakepoint = createStore<Brakepoint | null>(null)
 /**
  * Represents a combined store for managing application layout state
  * @type {AppLayout} Combined store containing the current breakpoint value
+ *   @param brakePoint
  */
-export const $appLayout = combine<AppLayout>({ breakPoint: $brakepoint })
+export const $appLayout = combine<AppLayout>({ breakpoint: $brakepoint })
 
 /**
  * REDUSERS
@@ -46,4 +42,5 @@ sample({
 window.addEventListener('resize', () => windowResize())
 window.addEventListener('load', () => windowResize())
 
-window.removeEventListener('resize', ()=>{})
+window.removeEventListener('resize', () => windowResize())
+window.removeEventListener('load', () => windowResize())
